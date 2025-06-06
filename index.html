@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day11_assign1</title>
+    <style>
+        body{
+            margin-top: 100px;
+        }
+        .cont{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .num{
+            margin-top: 50px;
+            font-size: 25px;
+        }
+        input{
+            padding: 5px 40px;
+            text-align: left;
+            font-size: 20px;
+        }
+        .validate{
+            margin-top: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="head">
+            <h1>Mobile Number Validation using JavaScript</h1>
+        </div>
+
+        <div class="num">
+            <form >
+                Enter Mobile Number : <input type="text" id="number" placeholder="Enter 10 Digit Mobile Num" dir="ltr" >
+            </form>
+        </div>
+        
+        <div class="validate">
+            <input type="submit" value="Validate" id="submit">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("submit").addEventListener('click',function(a){
+            a.preventDefault();
+        
+        let x=document.getElementById("number").value.trim();
+
+        if(x.length!=10){
+            alert("The number should be 10 digit!");
+        }
+        else{
+            alert("The number is valid.");
+        }
+        })
+    </script>
+</body>
+</html>
